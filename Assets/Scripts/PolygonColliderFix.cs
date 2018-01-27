@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof (PolygonCollider2D))]
 public class PolygonColliderFix : MonoBehaviour {
 
-    public float pixelsPerUnit;
+    public float pixelsPerUnit = 64f;
+    public bool edgeCollider;
 
     PolygonCollider2D col;
+    EdgeCollider2D edge;
 
     void Start() {
-        col = GetComponent<PolygonCollider2D>();
-        FixPolygon();
+        if (edgeCollider) {
+            edge = GetComponent<EdgeCollider2D>();
+            FixEdge();
+        }
+        else {
+            col = GetComponent<PolygonCollider2D>();
+            FixPolygon();
+        }
     }
 
     void FixPolygon() {
@@ -19,6 +26,13 @@ public class PolygonColliderFix : MonoBehaviour {
         for (int i = 0; i < col.points.Length; ++i)
             fixedPoints[i] = FixPoint(col.points[i]);
         col.points = fixedPoints;
+    }
+
+    void FixEdge() {
+        Vector2[] fixedPoints = new Vector2[edge.points.Length];
+        for (int i = 0; i < edge.points.Length; ++i)
+            fixedPoints[i] = FixPoint(edge.points[i]);
+        edge.points = fixedPoints;
     }
 
     Vector2 FixPoint(Vector2 point) {
