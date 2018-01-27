@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212182092415207600}
   - component: {fileID: 58981588896705238}
   - component: {fileID: 114093556277637682}
+  - component: {fileID: 95549465293563360}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Untagged
@@ -57,6 +58,23 @@ CircleCollider2D:
   m_Offset: {x: 0.00781247, y: 0.00781247}
   serializedVersion: 2
   m_Radius: 0.390625
+--- !u!95 &95549465293563360
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340727964383404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 707d233329836074796221095d54fc90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114093556277637682
 MonoBehaviour:
   m_ObjectHideFlags: 1
