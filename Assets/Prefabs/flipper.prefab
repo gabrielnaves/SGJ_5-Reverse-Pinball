@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212923482364718450}
   - component: {fileID: 60306068773784112}
   - component: {fileID: 114888369835841848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: flipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

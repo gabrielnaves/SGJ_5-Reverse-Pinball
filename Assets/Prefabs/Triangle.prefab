@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 68613582410129590}
   - component: {fileID: 114627529013204248}
   - component: {fileID: 114886310982168440}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 60062521557960458}
   - component: {fileID: 95720617133627032}
   - component: {fileID: 114605350926135946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 68095096237545350}
   - component: {fileID: 114361852433382934}
   - component: {fileID: 114520555975403002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 68212486482645840}
   - component: {fileID: 114719082022541568}
   - component: {fileID: 114847420139792082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,10 +151,10 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.375, y: 0.453125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49253732, y: 0.5}
+    pivot: {x: 0.1343284, y: 0.2156863}
     oldSize: {x: 1.046875, y: 1.59375}
     newSize: {x: 1.046875, y: 1.59375}
     adaptiveTilingThreshold: 0.5
@@ -192,7 +192,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.375, y: 0.453125}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.3749342, y: -0.4410615}
@@ -209,7 +209,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.375, y: 0.453125}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.31259334, y: -0.5161741}
@@ -226,7 +226,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.375, y: 0.453125}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.17179036, y: 0.71813965}
