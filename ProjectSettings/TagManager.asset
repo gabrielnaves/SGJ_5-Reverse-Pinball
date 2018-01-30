@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1072505659
+    locked: 0
+  - name: Launchers
+    uniqueID: 2517916657
+    locked: 0
+  - name: Pinball Machine
+    uniqueID: 665067937
+    locked: 0
+  - name: Components
+    uniqueID: 4180139813
+    locked: 0
+  - name: GUI
+    uniqueID: 2655251121
+    locked: 0
