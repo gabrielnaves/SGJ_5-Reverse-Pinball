@@ -17,5 +17,6 @@ public class Triangle : MonoBehaviour {
         animator.SetTrigger(animatorTrigger);
         Vector2 force = (other.transform.position - transform.position).normalized * forceOnCollision;
         other.gameObject.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+        Score.instance.score += 20;
     }
 }

@@ -17,5 +17,6 @@ public class Bumper : MonoBehaviour {
         Vector2 force = other.transform.position - transform.position;
         force = force.normalized * forceOnCollision;
         other.gameObject.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+        Score.instance.score += 10;
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Overmind : MonoBehaviour {
 
+    public int ballAmount = 3;
     public GameObject ball;
     public ZoneBlock[] blocks;
     public ZoneBlockTrigger[] triggers;
@@ -17,9 +19,16 @@ public class Overmind : MonoBehaviour {
     }
 
     public void Reset() {
+        UpdateGameCount();
         ResetBall();
         ResetBlocks();
         ResetLaunchers();
+    }
+
+    void UpdateGameCount() {
+        ballAmount--;
+        if (ballAmount <= 0)
+            SceneManager.LoadScene("gameover");
     }
 
     void ResetBall() {
