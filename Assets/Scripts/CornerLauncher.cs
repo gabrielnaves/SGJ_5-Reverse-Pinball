@@ -2,31 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartLauncher : MonoBehaviour {
+public class CornerLauncher : MonoBehaviour {
 
-    static public StartLauncher instance;
+    public bool launching;
     public bool launched;
     public float distance;
     public float animationTime = 3f;
     public float launchForce = 1f;
 
     void Awake() {
-        instance = this;
         GetComponent<SpringJoint2D>().connectedAnchor = transform.position;
         GetComponent<SpringJoint2D>().distance = 0f;
     }
 
-    void Update() {
-        if (!launched && RequestedLaunch())
+    void OnCollisionEnter2D(Collision2D other) {
+        if (!launching)
             StartCoroutine(Launch());
-    }
-
-    bool RequestedLaunch() {
-        return Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
+        else if (launched)
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * launchForce, ForceMode2D.Impulse);
     }
 
     IEnumerator Launch() {
-        launched = true;
+        launching = true;
         GetComponent<SpringJoint2D>().enabled = false;
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;
@@ -39,11 +36,7 @@ public class StartLauncher : MonoBehaviour {
         }
         GetComponent<SpringJoint2D>().enabled = true;
         GetComponent<SpringJoint2D>().distance = 0;
+        launched = true;
         yield break;
-    }
-
-    void OnCollisionEnter2D(Collision2D other) {
-        if (launched)
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * launchForce, ForceMode2D.Impulse);
     }
 }
