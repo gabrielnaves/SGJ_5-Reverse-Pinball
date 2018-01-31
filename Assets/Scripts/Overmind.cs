@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Overmind : MonoBehaviour {
 
+    static public Overmind instance { get; private set; }
+
     public int ballAmount = 3;
     public GameObject ball;
     public ZoneBlock[] blocks;
@@ -15,14 +17,17 @@ public class Overmind : MonoBehaviour {
     Vector3 startBallPos;
 
     void Awake() {
+        instance = this;
         startBallPos = ball.transform.position;
     }
 
     public void Reset() {
-        UpdateGameCount();
-        ResetBall();
-        ResetBlocks();
-        ResetLaunchers();
+        if (startLauncher.launched) {
+            UpdateGameCount();
+            ResetBall();
+            ResetBlocks();
+            ResetLaunchers();
+        }
     }
 
     void UpdateGameCount() {
@@ -48,5 +53,10 @@ public class Overmind : MonoBehaviour {
         startLauncher.launched = false;
         foreach (CornerLauncher launcher in cornerLaunchers)
             launcher.launched = launcher.launching = false;
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.B))
+            SceneManager.LoadScene("menu");
     }
 }
