@@ -13,8 +13,8 @@ public class PlayerInput : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        input = input.normalized * inputForce;
+        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") / 2f);
+        input *= inputForce;
         rigidbody2d.AddForce(input);
     }
 }
