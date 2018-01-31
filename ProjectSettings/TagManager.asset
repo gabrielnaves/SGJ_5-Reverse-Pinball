@@ -47,6 +47,9 @@ TagManager:
   - name: Launchers
     uniqueID: 2517916657
     locked: 0
+  - name: Ball
+    uniqueID: 793459855
+    locked: 0
   - name: Pinball Machine
     uniqueID: 665067937
     locked: 0
