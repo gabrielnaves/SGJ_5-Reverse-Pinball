@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4069073068086904}
   - component: {fileID: 114580820848117908}
-  - component: {fileID: 61465515077679658}
+  - component: {fileID: 60743885687146032}
   m_Layer: 10
   m_Name: Trigger
   m_TagString: Untagged
@@ -137,8 +137,8 @@ PolygonCollider2D:
       - {x: 0.734375, y: -0.265625}
       - {x: 0.71875, y: -0.234375}
       - {x: 0.671875, y: -0.1875}
---- !u!61 &61465515077679658
-BoxCollider2D:
+--- !u!60 &60743885687146032
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -159,9 +159,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.46875, y: 0.3125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.08122964, y: 0.12707251}
+      - {x: -0.22556083, y: 0.12757109}
+      - {x: -0.3071866, y: -0.14152691}
+      - {x: 0.2630733, y: -0.16901693}
 --- !u!114 &114163568842416998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +235,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -114827483
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 97267112ae1f1ce4aafbb6fd76678d6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
